@@ -1,0 +1,10 @@
+$title-font-size: 64px;
+$background-color: whitesmoke;
+
+body {
+	background: $background-color;
+}
+
+.main > h1 {
+	font-size: $title-font-size;
+}
