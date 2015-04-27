@@ -106,12 +106,12 @@ gulp.task('server', function () {
 });
 
 
-gulp.task('default', ['clean'], function () {
-    runSequence(['compile', 'sass'], 'copy', 'server', 'opn', 'watch');
+gulp.task('default',  function () {
+    runSequence(['clean'], ['compile'], 'sass', 'copy', 'server', 'opn', 'watch');
 });
 
 gulp.task('build',['default']);
 
-gulp.task('production', ['clean:production'], function () {
-    runSequence(['clean:production'], ['compile:production', 'sass:dist'], 'copy:production');
+gulp.task('production', function () {
+    runSequence(['clean:production'], ['compile:production'],'sass:dist', 'copy:production');
 });
