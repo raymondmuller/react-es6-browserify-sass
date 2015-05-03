@@ -2,7 +2,7 @@
   "name": "react-es6-sass",
   "description": "An easy way to start a ReactJS app, the ES6 way",
   "author": "Raymond Muller <raymond.muller.1989@gmail.com>",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "devDependencies": {
     "babelify": "^6.0.2",
     "browserify": "^9.0.8",

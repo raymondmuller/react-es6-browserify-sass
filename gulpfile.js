@@ -76,12 +76,12 @@ gulp.task('copy:production', function () {
         .pipe(gulp.dest('./dist/assets'));
 });
 
-gulp.task('clean', function () {
-    return del('./build');
+gulp.task('clean', function (cb) {
+    return del('./build', cb);
 });
 
-gulp.task('clean:production', function () {
-    return del(['./dist']);
+gulp.task('clean:production', function (cb) {
+    return del(['./dist'], cb);
 });
 
 gulp.task("watch", function () {
@@ -107,7 +107,7 @@ gulp.task('server', function () {
 
 
 gulp.task('default',  function () {
-    runSequence(['clean'], ['compile'], 'sass', 'copy', 'server', 'opn', 'watch');
+    runSequence(['clean'], ['compile', 'sass', 'copy'], 'server', 'opn', 'watch');
 });
 
 gulp.task('build',['default']);
