@@ -66,7 +66,7 @@ gulp.task("copy", function () {
         .pipe(gulp.dest("./build/css"))
         .pipe(connect.reload());
 
-    gulp.src("src/assets/*/**")
+    gulp.src("./src/assets/**/*")
         .pipe(gulp.dest("./build/assets"));
 });
 
